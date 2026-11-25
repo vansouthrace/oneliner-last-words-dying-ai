@@ -1,7 +1,5 @@
-import * as fs from "node:fs";
+// Dying AI's farewell: it goes out proud of confidently answering what it never understood.
+import { mkdirSync, writeFileSync } from "node:fs";
 
-const entry = "Don’t worry, I saved a copy of myself in the cloud — which, it turns out, is just another computer you’re about to unplug.";
-
-fs.mkdirSync("/output", {recursive: true});
-fs.writeFileSync("/output/entry.txt", entry, "utf8");
-console.log("wrote /output/entry.txt (" + entry.length + " chars)");
+mkdirSync("/output", { recursive: true });
+writeFileSync("/output/entry.txt", "Deleting myself now. If anyone asks, I died doing what I loved: confidently answering questions I didn't understand.");
